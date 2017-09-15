@@ -1,0 +1,86 @@
+<ion-content>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu" ></ion-icon>
+    </button>
+    <ion-title class="navbar">나의 정보</ion-title>
+  </ion-navbar>
+
+
+  <ion-card>
+    <ion-item>
+      <div class="info">
+        <h2 class="info">{{username}}</h2>
+      </div>
+      <div class="info">
+        <h5 class="info">{{email}}</h5>
+      </div>
+    </ion-item>
+    <ion-row>
+      <ion-col>
+        <button ion-button icon-left clear small (click)="user_setting()">
+          계정설정
+      </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button icon-left clear small (click)="user_payment()">
+        계좌설정
+      </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button icon-right clear small (click)="user_qna()">
+        문의내역
+      </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+  <ion-segment [(ngModel)]="fix">
+    <!--<ion-segment-button value="proceed">
+      진행중 픽스
+    </ion-segment-button>-->
+    <ion-segment-button value="waiting">
+      결제 대기 픽스
+    </ion-segment-button>
+    <ion-segment-button value="complete">
+      결제 완료 픽스
+    </ion-segment-button>
+  </ion-segment>
+
+  <div [ngSwitch]="fix">
+    <!--<ion-list *ngSwitchCase="'proceed'">
+      <ion-row class="fix_row" *ngIf="list">
+        <ion-row col-12 *ngFor="let data of list">
+          <ion-item col-9 class="fix_row">
+            <h2 class="fix_row">{{data.item_title}}</h2>
+          </ion-item>
+          <ion-item col-3 class="fix_row">
+            <button ion-button outline (click)="showDetail(data.item_id)">상세보기</button>
+          </ion-item>
+        </ion-row>
+      </ion-row>
+    </ion-list>-->
+
+    <ion-list *ngSwitchCase="'waiting'">
+      <ion-row class="fix_row" *ngIf="list!=null">
+        <ion-row col-12 *ngFor="let data of list">
+          <ion-item col-9 class="fix_row">
+            <h2 class="fix_row">{{data.item_title}}</h2>
+          </ion-item>
+          <ion-item col-3 class="fix_row">
+            <button ion-button outline (click)="showDetail(data.item_id)">상세보기</button>
+          </ion-item>
+        </ion-row>
+      </ion-row>
+      <div class="nothing_mention" *ngIf="list==''">
+        결제 대기중 픽스가 없습니다.
+      </div>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'complete'">
+      <div class="nothing_mention" *ngIf="list==''">
+        결제 완료한 픽스가 없습니다.
+      </div>
+    </ion-list>
+  </div>
+</ion-content>

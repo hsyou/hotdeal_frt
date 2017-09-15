@@ -1,0 +1,9 @@
+{
+  "globalDependencies": {
+    "jquery": "registry:dt/jquery#1.10.0+20170310222111",
+    "localforage": "registry:dt/localforage#0.0.0+20161102134758"
+  },
+  "dependencies": {
+    "bcryptjs": "registry:dt/bcryptjs#2.4.0+20170109141314"
+  }
+}

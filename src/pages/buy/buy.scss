@@ -1,0 +1,79 @@
+page-buy {
+    //제목
+    #title{
+       color:white;
+       background-color: #1c1f2a;
+       text-align: center;
+       font-size:2rem;
+       padding-bottom: 10px;
+       border-bottom: 1px solid white
+
+    }
+    //선택한 옵션
+    #option_name{
+       color:white;
+       background-color: #1c1f2a;
+       text-align: center;
+       font-size:1.5rem;
+       padding-bottom: 10px;
+       border-bottom: 1px solid white
+    }
+    //결제하실 금액
+    #div_cost{
+        text-align: center;
+        font-size: 1.5rem;
+        margin-bottom:10px;
+    }
+    #cost{
+        font-size:1.9rem;
+        border-bottom: 0.5px solid white;
+    }
+
+    //checkbox
+    .item-ios{
+        color:white;
+        background-color: #1c1f2a;
+    }
+    .checkbox-ios .checkbox-checked, .checkbox-md .checkbox-checked {
+        border-color:white;
+        background-color: #1c1f2a;
+    }
+    
+    .item.item-md .checkbox-md {
+        margin: 9px 10px 9px 4px;
+    }
+    ion-label {
+        font-size:1.2rem;
+    }
+    .item-md{
+        background-color: #1c1f2a;
+        color:white;
+    }
+    //서비스 이용규칙 밑줄 제거
+    .item-ios.item-block .item-inner,.item-md.item-block .item-inner {
+        border-bottom: none;
+    }
+
+    //닫기 버튼
+    .button-ios{
+        background-color: #993dbc;
+    }
+    .button-md{
+        background-color: #993dbc;
+        box-shadow: none;
+    }
+    .button-ios.activated,.button-md.activated{
+        background-color: #993dbc;
+        box-shadow: none;
+    }
+    .text-ios-primary,.text-md-primary {
+        color: white;
+    }
+    .hidden-show-when {
+        display: inline !important; 
+    }
+    //구매 버튼
+    #btn_buy{
+        float:right;
+    }
+}

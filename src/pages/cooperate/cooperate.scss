@@ -1,0 +1,60 @@
+page-cooperate {
+    //툴바
+    ion-navbar.toolbar {
+        border-bottom: 1px solid #e6e6e6;
+    }
+    //타이틀 - 나의정보    
+    .toolbar-title-md,  .toolbar-title-ios {
+        color:#993dbc;
+    }
+    .toolbar-background, .toolbar-background-md {
+    background-color:white;
+    }
+
+     //전체배경
+    .scroll-content {
+    background-color:white;
+    }
+
+
+    //아이템
+    .item_title{
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+    .item-md,.item-ios{
+        padding-left:0;
+    }
+    ion-row{
+        padding-left:10px;
+        padding-right:10px;
+    }
+    ion-icon{
+        float:right;
+        color:#a1a1a1;
+    }
+    ion-list{
+        padding-top: 10px;
+    }
+
+    //아이템 밑줄
+    .list-md .item-block .item-inner,.list-ios .item-block .item-inner {
+        border-bottom:1px solid #e6e6e6;
+         padding-right:0px;
+    }
+
+    //제휴 고객센터
+    .contact{
+        color:grey;
+        font-size: 1.5rem;
+    }
+    .contact_header{
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+
+    .label-ios,.label-md {
+    margin: 11px 8px 11px 5px;
+    }
+
+}

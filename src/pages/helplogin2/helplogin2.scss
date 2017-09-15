@@ -1,0 +1,45 @@
+page-helplogin2 {
+
+   
+     .toolbar-title-ios{
+         color:white;
+     }
+     .toolbar-title-md{
+         color:white;
+     }
+     .toolbar-background, .toolbar-background-md {
+     background-color: #993dbc;
+     }
+
+     .scroll-content {
+      background-color: #993dbc;
+     }
+     ion-content{
+         position: relative;
+     }
+     .div1{
+        text-align: center;
+        margin-top:15%;
+        line-height: 150%;
+     }
+     .font1{
+         font-size:90%;
+         font-weight: 100;
+     }
+     .btn1{
+         background-color: #993dbc;
+         border:2px solid white;
+         width:80%;
+         left:10%;
+         position: absolute;
+         bottom:5%;
+     }
+     #line{
+         text-decoration: underline;
+     }
+      //뒤로가기 버튼
+     .bar-button-default-ios, .bar-button-default-md {
+     color:white;
+     }
+}
+

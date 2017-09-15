@@ -1,0 +1,131 @@
+<ion-content>
+  <ion-navbar>
+    <ion-title>회원가입</ion-title>
+  </ion-navbar>
+  <!--  <form [formGroup]="authForm" (ngSubmit)="onSubmit(authForm.value)">-->
+  <form [formGroup]="authForm" (ngSubmit)="cert_phone.hasError('cert_match')&&register(authForm.value)">
+    <ion-list>
+      <div class="form">
+        <ion-row>
+          <ion-item class="row" col-9 [class.error]="!user_email.valid && user_email.touched">
+            <ion-input name="user_email" type="email" placeholder="Email" [formControl]="user_email"></ion-input>
+          </ion-item>
+          <ion-item class="row" col-3>
+            <button type="button" ion-button outline (click)="checkEmail()">확인</button>
+          </ion-item>
+        </ion-row>
+        <div *ngIf="user_email.hasError('required') && user_email.touched" class="error-box">&nbsp;&nbsp; Email을 입력하세요</div>
+        <div *ngIf="user_email.hasError('checkEmailValidator') && user_email.touched" class="error-box">&nbsp;&nbsp; Email을 정확히 입력하세요</div>
+        <div *ngIf="user_email.hasError('duplicate') && user_email.touched" class="error-box">&nbsp;&nbsp; 중복된 이메일입니다</div>
+        <div *ngIf="user_email.hasError('success')" class="success-box">&nbsp;&nbsp; 사용가능한 이메일입니다</div>
+        <ion-item [class.error]="!user_password.valid && user_password.touched">
+          <ion-input name="user_password" type="password" minLength="8" maxLength="20" placeholder="비밀번호 (영문,특수문자,숫자혼합 8자이상)" [formControl]="user_password"></ion-input>
+        </ion-item>
+        <div *ngIf="user_password.hasError('required') && user_password.touched" class="error-box">&nbsp;&nbsp; 비밀번호를 입력하세요</div>
+        <div *ngIf="user_password.hasError('minlength') && user_password.touched" class="error-box">&nbsp;&nbsp; 최소 8글자 이상을 입력하세요</div>
+        <div *ngIf="user_password.hasError('checkPwdValidator') && user_password.touched" class="error-box">&nbsp;&nbsp; 영문,특수문자,숫자로 8글자 이상 입력하세요</div>
+
+        <ion-item [class.error]="!user_re_password.valid && user_re_password.touched">
+          <ion-input name="user_re_password" type="password" minLength="8" maxLength="20" placeholder="비밀번호 재입력" [formControl]="user_re_password"></ion-input>
+        </ion-item>
+        <div *ngIf="user_re_password.hasError('required') && user_re_password.touched" class="error-box">&nbsp;&nbsp; 비밀번호를 입력하세요</div>
+        <div *ngIf="user_re_password.hasError('minlength') && user_re_password.touched" class="error-box">&nbsp;&nbsp; 비밀번호를 확인해주세요</div>
+        <div *ngIf="user_re_password.hasError('pw_mismatch') && user_re_password.touched" class="error-box">&nbsp;&nbsp; 비밀번호가 다릅니다</div>
+      </div>
+
+      <div class="form">
+        <ion-item [class.error]="!user_name.valid && user_name.touched">
+          <ion-input name="name" type="text" placeholder="이름" [formControl]="user_name"></ion-input>
+        </ion-item>
+        <div *ngIf="user_name.hasError('required') && user_name.touched" class="error-box">&nbsp;&nbsp; 이름을 입력하세요</div>
+        <ion-item>
+          <ion-label>생년월일</ion-label>
+          <ion-datetime name="user_birth" displayFormat="MMM DD YYYY" [formControl]="user_birth"></ion-datetime>
+        </ion-item>
+        <ion-list radio-group col-12 [formControl]="user_gender">
+          <ion-row>
+            <ion-item col-6>
+              <ion-label>여성</ion-label>
+              <ion-radio name="female" value="f" checked></ion-radio>
+            </ion-item>
+            <ion-item col-6>
+              <ion-label>남성</ion-label>
+              <ion-radio name="male" value="m" ></ion-radio>
+            </ion-item>
+          </ion-row>
+        </ion-list>
+      </div>
+
+      <div class="form">
+        <div col-12>
+          <ion-row>
+            <ion-item col-9 [class.error]="!user_phone.valid && user_phone.touched">
+              <ion-input name="user_phone" type="tel" placeholder="휴대전화번호(숫자만)" [formControl]="user_phone"></ion-input>
+            </ion-item>
+            <ion-item col-3>
+              <button type="button" ion-button outline (click)="certPhone()">인증</button>
+            </ion-item>
+          </ion-row>
+        </div>
+        <div col-12>
+          <ion-row>
+            <ion-item col-9>
+              <ion-input name="cert_phone" type="tel" placeholder="인증번호 확인" [formControl]="cert_phone"></ion-input>
+            </ion-item>
+            <ion-item col-3>
+              <button type="button" ion-button outline (click)="checkCert()">확인</button>
+            </ion-item>
+          </ion-row>
+        </div>
+        <div *ngIf="user_phone.hasError('required') && user_phone.touched" class="error-box">&nbsp;&nbsp; 연락처를 입력하세요</div>
+        <div *ngIf="user_phone.hasError('checkValidator') && user_phone.touched" class="error-box">&nbsp;&nbsp; 연락처를 정확히 입력하세요</div>
+        <div *ngIf="cert_phone.hasError('required')&& cert_phone.touched" class="error-box">&nbsp;&nbsp; 인증번호를 입력하세요</div>
+        <div *ngIf="cert_phone.hasError('cert_mismatch') && cert_phone.touched" class="error-box">&nbsp;&nbsp; 인증번호가 다릅니다</div>
+        <div *ngIf="cert_phone.hasError('cert_match')" class="success-box">&nbsp;&nbsp; 인증 성공</div>
+      </div>
+
+      <div id="mention">
+        가입하기 버튼을 누르시면 서비스 이용약관,<br> 개인 정보취급방침에 동의하신 것으로 간주됩니다.
+      </div>
+
+
+      <ion-row id="submit-btn">
+        <button ion-button class="submit-btn" full type="submit" [disabled]="!cert_phone.hasError('cert_match')||user_email.hasError('checkEmailValidator')||user_password.hasError('checkPwdValidator')
+        ||user_re_password.hasError('pw_mismatch')||user_re_password.hasError('minlength')||user_email.hasError('required')||user_re_password.hasError('required')||user_email.hasError('duplicate')||!user_email.hasError('success')||
+        user_name.hasError('required')" clear><ion-icon ios="ios-checkmark-circle" md="md-checkmark-circle"></ion-icon>&nbsp;가입하기</button>
+      </ion-row>
+
+    </ion-list>
+
+
+
+  </form>
+
+  <!--   <div class="login-box">
+    
+    <form (ngSubmit)="register()" #registerForm="ngForm">
+      <ion-row>
+        <ion-col>
+          <ion-list inset>
+            
+            <ion-item>
+              <ion-input type="text" placeholder="Email" name="email" [(ngModel)]="registerCredentials.email" required></ion-input>
+            </ion-item>
+            
+            <ion-item>
+              <ion-input type="password" placeholder="Password" name="password" [(ngModel)]="registerCredentials.password" required></ion-input>
+            </ion-item>
+            
+          </ion-list>
+        </ion-col>
+      </ion-row>
+      
+      <ion-row>
+        <ion-col class="signup-col">
+          <button ion-button class="submit-btn" full type="submit" [disabled]="!registerForm.form.valid">Register</button>
+        </ion-col>
+      </ion-row>
+      
+    </form>
+  </div>-->
+</ion-content>

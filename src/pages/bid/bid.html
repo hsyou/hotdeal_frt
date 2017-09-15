@@ -1,0 +1,29 @@
+<ion-content>
+    <ion-card id="title">{{item_title}}</ion-card>
+    <ion-card id="option_name">{{option_name}}</ion-card>
+    <ion-card id="cost">
+        {{moneyChoice}}원 
+        <ion-item>
+            <ion-range min="{{item_min_price}}" max="{{item_max_price}}" step="1000" pin="true" [(ngModel)]="moneyChoice" color="secondary">
+                <ion-icon range-left>{{item_min_price}}</ion-icon>
+                <ion-icon range-right>{{item_max_price}}</ion-icon>
+            </ion-range>
+        </ion-item>
+    </ion-card>
+    <ion-card id="time">
+
+        <div>잔여시간 : &nbsp;<span class="text" style="color:white"></span>
+            <div class="item_end_date" style="font-size:0%;color:white;visibility:hidden">{{item_end_date}}</div>
+        </div>
+        <div>마감일 : &nbsp;<span style="color:white">{{item_end_date|date:'yyyy-MM-d  HH:mm:ss'}}</span></div>
+
+    </ion-card>
+
+</ion-content>
+<ion-footer>
+    <button ion-button (click)="back()">
+        <span ion-text color="primary" showWhen="ios"></span>
+         <ion-icon ios="ios-arrow-back" md="ios-arrow-back"></ion-icon>
+      </button>
+    <button id="btn_bid" ion-button (click)="completeBid(option_id,moneyChoice)">입찰하기</button>
+</ion-footer>

@@ -1,0 +1,70 @@
+page-set {
+    //툴바
+    ion-navbar.toolbar {
+        border-bottom: 1px solid #e6e6e6;
+    }
+    //타이틀     
+    .toolbar-title-md,  .toolbar-title-ios {
+        color:#993dbc;
+    }
+    .toolbar-background, .toolbar-background-md {
+    background-color:white;
+    }
+
+     //전체배경
+    .scroll-content {
+    background-color:white;
+    }
+
+
+    //아이템
+    .item_title{
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+    .item-md,.item-ios{
+        padding-left:0;
+    }
+    ion-row{
+        padding-left:10px;
+        padding-right:10px;
+    }
+    ion-icon{
+        float:right;
+        color:#a1a1a1;
+    }
+    ion-list{
+        padding-top: 10px;
+    }
+
+    //아이템 밑줄
+    .list-md .item-block .item-inner,.list-ios .item-block .item-inner {
+        border-bottom:1px solid #e6e6e6;
+         padding-right:0px;
+    }
+
+    //자동로그인, PUSH알림 토글버튼
+   .toggle-ios.toggle-checked .toggle-icon {
+        background-color: #993dbc;
+    }
+    .toggle-md.toggle-checked .toggle-inner {
+        background-color: #993dbc;
+    }
+    .toggle-md.toggle-checked .toggle-icon {
+        background-color: #e6e6e6;
+    }
+
+    //footer
+    #footer{
+        position: absolute;
+        bottom:1px;
+    }
+    #footer_div1{
+        text-align: center;
+    }
+
+    #footer_btn{
+        background-color: grey;
+    }
+
+}

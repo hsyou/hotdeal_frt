@@ -1,0 +1,30 @@
+<ion-content>
+  <div padding>
+    <ion-header>
+      <ion-icon name="menu" id="menu" menuToggle></ion-icon>
+    </ion-header>
+    <div id="login_logo"><img id="login_img" src="assets/img/login_logo.png" /></div>
+
+    <form id="form" (ngSubmit)="login()" #registerForm="ngForm">
+      <ion-list inset>
+        <ion-row>
+          <ion-input type="text" placeholder="Email" name="email" [(ngModel)]="registerCredentials.email" required></ion-input>
+        </ion-row>
+        <ion-row>
+          <ion-input type="password" placeholder="비밀번호" name="password" [(ngModel)]="registerCredentials.password" required></ion-input>
+        </ion-row>
+      </ion-list>
+      <ion-row>
+        <ion-col>
+          <button type="button" ion-button class="submit-btn" full type="submit" [disabled]="!registerForm.form.valid">로그인</button>
+          <div id="btn_help">
+            <button type="button" ion-button class="register-btn" block clear (click)="helpLogin()">로그인이 안되시나요?</button>
+          </div>
+          <div id="btn_create">
+            <button type="button" ion-button class="register-btn" block clear (click)="createAccount()">회원가입</button>
+          </div>
+        </ion-col>
+      </ion-row>
+    </form>
+  </div>
+</ion-content>

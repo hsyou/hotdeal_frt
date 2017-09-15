@@ -1,0 +1,14 @@
+<ion-content>
+  <ion-navbar>
+    <ion-title>공지사항</ion-title>
+  </ion-navbar>
+  <ion-list>
+    <ion-row *ngFor="let data of notice">
+      <ion-item (click)="getNotice_detail(data.notice_id)"><span class="item_title">{{data.notice_title}}</span>
+        <div id="date">{{data.notice_indate|date:'yy/MM/dd'}}
+          <ion-icon ios="ios-arrow-forward" md="ios-arrow-forward"></ion-icon>
+        </div>
+      </ion-item>
+    </ion-row>
+  </ion-list>
+</ion-content>

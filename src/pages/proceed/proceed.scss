@@ -1,0 +1,78 @@
+proceed{
+
+    // .navbar{
+    //     background-color:#1c1f2a;
+    //     color:white;
+    // }
+    .navbar{
+        background-color:#1c1f2a;
+        color:white;
+         }
+      ion-navbar{
+        background-color:#1c1f2a;
+        color:white;
+    }
+
+    .toolbar-background, .toolbar-background-md{
+        background-color:#1c1f2a;
+        color:white;
+    }
+    .toolbar-title-ios, .toolbar-title-md{
+        color:white;
+    }
+
+    .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default {
+    color:white;
+    }
+    .bar-button-default-ios, .bar-button-clear-ios-default, .bar-button-ios-default {
+    color:white;
+    }
+    #img{
+        height:100%;
+        width:100%;
+    }
+    .btn{
+        color:white;
+    }
+    .btn_sel{
+        color:#993dbc;
+    }
+
+    //swiper progress color 
+    .swiper-pagination-progress .swiper-pagination-progressbar {
+    background:#993dbc;
+    }
+
+/* //footer
+    .bar-button-menutoggle-ios,.bar-button-menutoggle-md {
+    margin:0;
+    }
+   
+    .button-ios{
+        margin-left:10px;
+    }
+    .button-md{
+        margin-left:5px;
+    }*/
+
+    //좋아요,남은시간
+    .proceed_title{
+        text-align: left;
+        font-size:1.3rem;
+        padding-top: 2%;
+    }
+    .title{
+        margin-top:2%;
+        margin-left:5%;
+        position:absolute;
+        bottom:40px;
+    }
+    //진행중 상품 없을때
+    
+    #nothing{
+        text-align: center;
+        margin-top: 70%;
+        font-size: 2rem;
+
+    }
+}

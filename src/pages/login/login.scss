@@ -1,0 +1,99 @@
+page-login{
+    #menu{
+        font-size: 2.4rem;
+    }
+    .login{
+        height:100%;
+        width:100%;
+        background-color:  #1c1f2a;
+        background-size: cover;
+
+    }
+    //헤더
+    ion-header{
+        margin:15px 0px 0px 20px;
+        width:0;
+    }
+
+
+    .card-content-ios {
+        background-color:  #1c1f2a;
+        color:white;
+    }
+    .card-title-ios {
+        color: white;
+    }
+    .card-content-md {
+        background-color:  #1c1f2a;
+        color:white;
+    }
+    .card-title-md {
+        color: white;
+    }
+    .card-md p{
+        color:grey;
+    }
+    .ion-page {
+        background-color:  #1c1f2a;
+    }
+
+    //로고 이미지
+    #login_img{
+        width:40%;
+    }
+    #login_logo{
+        text-align: center;
+        margin-top:15%;
+    }
+
+    //폼
+    #form{
+        margin-top:45%;
+    }
+    
+
+
+    .submit-btn{
+        width:94%;
+        left:3%;
+        background-color: #993dbc;
+    }
+    .register-btn{
+        color:gray;
+    }
+
+    .button-round-md {
+    text-align:center;
+    width:70%;
+    }
+
+    .button-outline-md {
+        border-color:blue;
+        color:white;
+    }
+
+    .button-round-ios {
+    text-align:center;
+    width:70%;
+    }
+
+    .button-outline-ios {
+        border-color:white;
+        color:white;
+    }
+
+    #btn_help{
+        float:left;
+        text-decoration: underline gray;
+    }
+    #btn_create{
+        float:right;
+    }
+    .register-btn{
+        font-size:0.9rem;
+    }
+    ion-input{
+          border-bottom:1px solid white;
+    }
+
+}

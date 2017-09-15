@@ -1,0 +1,143 @@
+page-payment {
+     //타이틀 - 계정설정    
+    .toolbar-title-md,  .toolbar-title-ios {
+        color:#993dbc;
+    }
+    .toolbar-background, .toolbar-background-md {
+    background-color:white;
+    }
+    //전체배경
+    .scroll-content {
+        background-color:#E6E6E6;
+        color:grey;
+    }
+    .item-md,.item-ios{
+        padding-left:0px;
+        font-size:1.4rem;
+    }
+    //ion-item
+    .list-md > .item-block {
+    background-color:white;
+    color:black;
+    }
+     .list-ios > .item-block {
+    background-color:white;
+    color:black;
+    }
+      //ion-item 밑줄 제거
+    .list-md .item-block .item-inner,.list-ios .item-block .item-inner  {
+    border:0;
+    }
+
+    //input 밑줄 처음
+    .list-md .item-block .item-inner {
+        border-bottom: 1px solid white;
+    }
+    .list-md .item-input:last-child {
+        border-bottom: none;
+    }
+    //input 쓰고 지울때
+   .item-md.item-input.ng-invalid.ng-touched:not(.input-has-focus) .item-inner {
+        border-bottom-color:white;
+        box-shadow: none;
+    }
+    //쓸때 포커스 있을때
+    .item-md.item-input.input-has-focus .item-inner{
+        border-bottom-color:white;
+        box-shadow: none;
+    }
+    .item-md.item-input.input-has-focus:last-child{
+        border-bottom-color:white;
+        box-shadow: none;
+    }
+    //쓰고 난후 포커스 다른곳
+    .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus) .item-inner {
+        border-bottom-color: white;
+        box-shadow: inset 0 -1px 0 0 white;
+    }
+    .list-md .item-input.ng-invalid.ng-touched:not(.input-has-focus):last-child {
+        border-bottom-color:white;
+        box-shadow: none;
+    }
+    //쓰고 난후
+    .list-md .item-input.ng-valid.input-has-value:not(.input-has-focus):last-child {
+        border-bottom-color: white;
+        box-shadow: none;
+    }
+    //input 에러
+    .item-md.item-input.ng-invalid.ng-touched:not(.input-has-focus):not(.item-input-has-focus) .item-inner {
+    border-bottom-color: white;
+    -webkit-box-shadow: inset 0 -1px 0 0 white;
+    
+    box-shadow: inset 0 -1px 0 0 white;
+    }
+    //input 성공
+    .item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner, .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner {
+    border-bottom-color: white;
+    -webkit-box-shadow: inset 0 -1px 0 0 white;
+    box-shadow: inset 0 -1px 0 0 white;
+    }
+
+
+    //ion-item
+    [col-12]{
+        padding:0px;
+    }
+    .label-md, .label-ios {
+        margin: 0px 2px 0px 8px;
+    }
+    .setting_title{
+        color:grey;
+    }
+
+    //은행선택
+    #ion-label{
+        margin-left:2px;
+        padding-right:0px;
+        color:grey;
+    }
+    .select-ios{
+        padding: 11px 8px 11px 0px;
+    }
+    .select-md{
+        padding: 11px 8px 11px 7px;
+    }
+    
+
+
+    
+    //계좌정보
+    .setting_list{
+        margin:10px 0px 5px 8px;
+    }
+
+    //등록하기
+    .button-clear-ios, .button-clear-md{
+        color:white;
+    }
+
+     @media(max-width:375px){
+        .item-block{
+            min-height:3.5rem;
+        }
+    }
+    #submit-btn{
+         background-color: #993dbc;;
+    }
+}
+    //은행 선택시 
+    .alert-ios [aria-checked=true] .alert-radio-label {
+        color:#993dbc;
+    }
+    .alert-ios [aria-checked=true] .alert-radio-inner {
+        border-color: #993dbc;
+    }
+    .alert-md [aria-checked=true] .alert-radio-label {
+        color:#993dbc;
+    }
+    .alert-md .alert-radio-inner {
+        background-color: #993dbc;
+    }
+    .alert-md [aria-checked=true] .alert-radio-icon {
+        border-color: #993dbc;
+    }

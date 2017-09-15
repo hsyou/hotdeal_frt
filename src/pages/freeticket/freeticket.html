@@ -1,0 +1,25 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+      <ion-icon name="menu" ></ion-icon>
+    </button>
+        <ion-title class="navbar">프리</ion-title>
+         
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-slides *ngIf="proceed" [autoplay]="3000" [speed]="1000" [loop]="true" pager paginationType="progress">
+        <ion-slide id="ion_slide" *ngFor="let data of proceed" (click)="slideClick(data.item_id)" 
+        class="slide" style="background-color: #1c1f2a">
+            <img id="img" src="http://221.146.137.15:8181{{data.item_main_img}}">
+            <div class="text" style="color:white"></div>
+            <div class="item_end_date" style="font-size:0%;color:white;visibility:hidden">{{data.item_end_date}}</div>
+
+
+
+        </ion-slide>
+    </ion-slides>
+
+</ion-content>
+

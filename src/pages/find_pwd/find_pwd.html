@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>비밀번호 찾기</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="div1">
+    휴대폰으로 찾기
+  </div>
+  <div class="div2">
+    <form [formGroup]="findForm" (ngSubmit)="find_pwd(findForm.value)">
+      <ion-row>
+        <ion-col>
+          <ion-input type="text" placeholder="이름" name="name" required [formControl]="name"></ion-input>
+          <ion-input type="tel" placeholder="휴대폰 번호" name="phone" required [formControl]="phone"></ion-input>
+        </ion-col>
+      </ion-row>
+      <br>
+      <ion-row>
+        <ion-col class="signup-col">
+          <button type="button" ion-button block class="submit-btn btn1" full type="submit">전송하기</button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </div>
+  <br><br>
+  <!--<div class="div1">
+    이메일로 찾기
+  </div>
+  <div class="div2">
+    <form (ngSubmit)="login()">
+      <ion-row>
+        <ion-col>
+          <ion-input type="text" placeholder="이름" name="name" required></ion-input>
+          <ion-input type="email" placeholder="이메일 주소" name="phone" required></ion-input>
+        </ion-col>
+      </ion-row>
+      <br>
+      <ion-row>
+        <ion-col class="signup-col">
+          <button type="button" ion-button block class="submit-btn btn1" full type="submit">전송하기</button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </div>-->
+  <!--<div class="div3">
+    <button id="footer" col-12 ion-button color="light" clear (click)="helpLogin2()">문제가 있으신가요?</button>
+  </div>-->
+</ion-content>

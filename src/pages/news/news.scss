@@ -1,0 +1,41 @@
+page-news {
+.navbar{
+        background-color:#1c1f2a;
+        color:white;
+         }
+      ion-navbar{
+        background-color:#1c1f2a;
+        color:white;
+    }
+
+    .toolbar-background, .toolbar-background-md{
+        background-color:#1c1f2a;
+        color:white;
+    }
+    .toolbar-title-ios, .toolbar-title-md{
+        color:white;
+    }
+
+    .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default {
+    color:white;
+    }
+    .bar-button-default-ios, .bar-button-clear-ios-default, .bar-button-ios-default {
+    color:white;
+    }
+    #img{
+        height:100%;
+        width:100%;
+    }
+    .btn{
+        color:white;
+    }
+    .btn_sel{
+        color:#993dbc;
+    }
+    
+    //swiper progress color 
+.swiper-pagination-progress .swiper-pagination-progressbar {
+  background:#993dbc;
+}
+
+}

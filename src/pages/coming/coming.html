@@ -1,0 +1,18 @@
+<ion-content>
+    <ion-slides *ngIf="proceed" [autoplay]="3000" [speed]="500" [loop]="true" pager paginationType="progress">
+        <ion-slide id="ion_slide" *ngFor="let data of proceed" (click)="slideClick(data.item_id)" class="slide" style="background-color: #1c1f2a">
+            <img id="img" src="http://www.fixme.kr/{{data.item_main_img}}">
+            <div id="like">
+                 <ion-icon id="icon" ios="ios-heart" md="md-heart"></ion-icon> &nbsp; {{data.item_like}}
+            </div>
+            <div id="title">
+                <div class="coming_title">
+                    COMING SOON
+                    <div class="coming_title">
+                        {{data.item_start_date|date:"yy년 MM월 dd일"}}
+                    </div>
+                </div>
+            </div>
+        </ion-slide>
+    </ion-slides>
+</ion-content>

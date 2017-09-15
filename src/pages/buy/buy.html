@@ -1,0 +1,44 @@
+<ion-content>
+    <ion-card id="title">{{item_title}}</ion-card>
+    <ion-card id="option_name">{{option_name}}</ion-card>
+    <ion-card>
+        <img src="http://www.fixme.kr/{{item_main_img}}">
+    </ion-card>
+    <div id="div_cost">
+        결제 하실 금액 : <span id="cost">{{item_min_price}}원</span>
+    </div>
+    <div>
+        <ion-row>
+            <ion-col col-3>입금자명
+            </ion-col>
+            <ion-col col-6>
+                이름 입력
+            </ion-col>
+            <ion-col col-3>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col col-3>연락정보
+            </ion-col>
+            <ion-col col-6>
+                010-3398-8283
+            </ion-col>
+            <ion-col col-3>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-item>
+                <ion-label>서비스 이용규칙 및 취소, 환불규정을 확인하였습니다.</ion-label>
+                <ion-checkbox [(ngModel)]="check"></ion-checkbox>
+            </ion-item>
+        </ion-row>
+    </div>
+
+</ion-content>
+<ion-footer>
+    <button ion-button (click)="back()">
+        <span ion-text color="primary" showWhen="ios"></span>
+         <ion-icon ios="ios-arrow-back" md="ios-arrow-back"></ion-icon>
+      </button>
+    <button id="btn_buy" ion-button (click)="completeBuy(option_id,moneyChoice)">구매하기</button>
+</ion-footer>

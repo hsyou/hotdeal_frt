@@ -1,0 +1,64 @@
+choice{
+    //제목
+    #title{
+        text-align: center;
+    }
+   
+    //가격선택
+    .item-ios{
+        background-color: #1c1f2a;
+    }
+    //밑줄 제거
+    .item-ios.item-block .item-inner {
+        border-bottom: 0.55px solid #1c1f2a;
+    }
+    .range-ios .range-pin {
+        color:white;
+    }
+
+    #ion-card{
+         background-color:#993dbc;
+    }
+    //닫기 버튼
+    .button-ios{
+        background-color: #993dbc;
+    }
+    .button-md{
+        background-color: #993dbc;
+        box-shadow: none;
+    }
+    .button-ios.activated,.button-md.activated{
+        background-color: #993dbc;
+        box-shadow: none;
+    }
+    .text-ios-primary,.text-md-primary {
+        color: white;
+    }
+    .hidden-show-when {
+        display: inline !important; 
+    }
+
+    //옵션 선택 card
+    .list-md{
+        margin:12px 0 16px 0;
+    }
+    .card-md{
+        padding:7px;
+    }
+    .card-ios{
+        padding:7px;
+    }
+
+}
+    ion-footer{
+        background: #993dbc;
+        height:41px;
+    }
+    .button-ios {
+         margin: 0;
+         height:41px;
+    }
+ .statusbar {
+    display: none;
+
+    }

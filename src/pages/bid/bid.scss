@@ -1,0 +1,137 @@
+bid{
+    //제목
+    #title{
+       color:white;
+       background-color: #1c1f2a;
+       text-align: center;
+       font-size:2rem;
+       padding-bottom: 10px;
+       border-bottom: 1px solid white
+
+    }
+    //선택한 옵션
+    #option_name{
+       color:white;
+       background-color: #1c1f2a;
+       text-align: center;
+       font-size:1.5rem;
+       padding-bottom: 10px;
+       border-bottom: 1px solid white
+    }
+
+
+    //가격선택
+     .item-ios{
+        background-color: #1c1f2a;
+    }
+    //밑줄 제거
+    .item-ios.item-block .item-inner {
+    border-bottom: 0.55px solid #1c1f2a;
+    }
+    .range-ios .range-pin {
+    color:white;
+    }
+
+    #cost{
+        color:#993dbc;
+        background-color: #1c1f2a;
+        text-align: center;
+        font-size:1.9rem;
+       padding-bottom: 10px;
+       border-bottom: 1px solid white
+    }
+     #time{
+        color:#993dbc;
+        background-color: #1c1f2a;
+        text-align: center;
+        font-size:15px;
+       padding-bottom: 10px;
+       border-bottom: 1px solid white
+    }
+
+    ion-range ion-icon {
+        font-size:1.4rem;
+    }
+    
+    //range 안드로이드 배경
+    .item-md{
+        background-color: #1c1f2a;
+    }
+    
+    //range 가격
+    .item-md,.item-ios{
+        color:white;
+    }
+
+    //range actived
+    .range-md-secondary .range-bar-active, .range-md-secondary .range-knob,
+     .range-md-secondary .range-pin, .range-md-secondary .range-pin::before {
+        background: #993dbc;
+        color:#993dbc;
+    }
+    .range-ios-secondary .range-bar-active, .range-ios-secondary .range-tick-active {
+        background: #993dbc;
+    }
+    .range-ios .range-knob {//동그란거
+        background: #993dbc;
+        width:14px;
+        height:14px;
+        top:14px;
+        left:14px;
+    }
+
+    //닫기 버튼
+    .button-ios{
+        background-color: #993dbc;
+    }
+    .button-md{
+        background-color: #993dbc;
+        box-shadow: none;
+    }
+    .button-ios.activated,.button-md.activated{
+        background-color: #993dbc;
+        box-shadow: none;
+    }
+    .text-ios-primary,.text-md-primary {
+        color: white;
+    }
+    .hidden-show-when {
+        display: inline !important; 
+    }
+    //입찰 버튼
+    #btn_bid{
+        float:right;
+    }
+
+
+}
+    //입찰완료
+    .alert-md .alert-button-group,.alert-ios .alert-button-group {
+        background-color: #993dbc;
+        padding:0;
+    }
+    .alert-md .alert-button,.alert-ios .alert-button {
+        color:white;
+        text-align: center;
+    }
+    .alert-ios .alert-button.activated{
+        background-color: #993dbc;
+    }
+    .alert-ios .alert-button:last-child {
+        font-weight: normal;
+    }
+    //입찰완료 제목
+    .alert-md .alert-title {
+        font-size: 17px;
+        font-weight: 600;
+    }
+    .alert-ios .alert-title,.alert-md .alert-title {
+        color:#993dbc;
+        text-align: center;
+    }
+    //입찰완료 내용
+    .alert-md .alert-sub-title {
+        font-size: 14px;
+        color:#666;
+    }
+

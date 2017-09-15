@@ -1,0 +1,30 @@
+Coming{
+    //swiper progress color 
+    .swiper-pagination-progress .swiper-pagination-progressbar {
+    background:#993dbc;
+    }
+    #img{
+    }
+
+    //시작시간
+    .coming_title{
+        text-align: left;
+        font-size:1.3rem;
+        padding-top: 2%;
+    }
+    #title{
+        margin-top:2%;
+        margin-left:5%;
+        position: absolute;
+        bottom: 20px;
+    }
+    #like{
+        position: absolute;
+        margin-top:2%;
+        right:20px;
+        bottom: 20px;
+    }
+    #icon{
+        color:#993dbc;
+    }
+}

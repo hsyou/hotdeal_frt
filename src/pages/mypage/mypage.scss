@@ -1,0 +1,106 @@
+page-mypage {
+
+    //타이틀 - 나의정보    
+    .toolbar-title-md,  .toolbar-title-ios {
+        color:#993dbc;
+    }
+    .toolbar-background, .toolbar-background-md {
+    background-color:white;
+    }
+
+     //전체배경
+    .scroll-content {
+    background-color:#E6E6E6;
+    }
+
+
+    //카드
+    .card-md,.item-md,.card-ios,.item-ios  {
+        padding:0;
+        margin:0;
+        width:100%;
+        background-color: #1c1f2a;
+        color:white;
+     }
+     //아이템 밑줄
+     .item-md.item-block .item-inner,.item-ios.item-block .item-inner  {
+     padding-right:0;
+     border-bottom: 1px solid #e6e6e6;
+     }
+
+    //이미지
+    #user{
+        width:25%;
+        height:25%;
+        left:38%;
+        position: relative;
+        padding-bottom: 2%;
+    }
+    
+    //이름,이메일
+   .info{
+        text-align: center;
+        color:white;
+    }
+
+    //계정설정, 결제설정, 문의내역
+    .button-clear-ios,.button-clear-md {
+        color:white;
+    }
+    ion-col{
+        text-align: center;
+        border:1px solid white;
+    }
+
+    //칸 띄우기
+    ion-segment {
+        padding-top:5%;
+    }
+
+    //탭
+    .segment-ios .segment-button,.segment-md .segment-button {
+        background-color: white;
+        color:grey;
+        border-color: white;
+        border-bottom-width: 2px;
+    }
+    //탭 클릭시
+   .segment-md .segment-button.segment-activated {
+        background-color: white;
+        color:#993dbc;
+        border-color:#993dbc;
+    }
+    .segment-ios .segment-button.segment-activated {
+        background-color: white;
+        border-bottom-color:#993dbc;
+        color:#993dbc;
+    }
+    //탭 목록
+    .list-ios > .item-block, .list-md > .item-block {
+        background-color:white;
+        color:black;
+    }
+    .fix_row{
+        background-color: white;
+        color:black;
+    }
+
+    //내용 없을 때 
+    .nothing_mention{
+        color:grey;
+        text-align: center;
+        margin-top:30%;
+    }
+    
+
+    //상세보기 버튼 css
+    .button-outline-ios, .button-outline-md  {
+    border-color:#993dbc;
+    color:#993dbc;
+    }
+    .button-outline-ios.activated, .button-outline-md.activated {
+    background-color:#993dbc;
+    color:white;
+    }
+    
+}

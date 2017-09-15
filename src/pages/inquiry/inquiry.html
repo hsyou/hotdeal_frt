@@ -1,0 +1,34 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>문의하기</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <form [formGroup]="inquiryForm" (ngSubmit)="register(inquiryForm.value)">
+    <ion-list>
+      <div class="form">
+        <ion-item>
+          <ion-input max="20" name="inquiry_title" type="text" placeholder="제목을 입력하세요." [formControl]="inquiry_title"></ion-input>
+        </ion-item>
+        <br>
+        <ion-item>
+          <textarea lineHeight="22" name="inquiry_content" type="text" placeholder="내용을 입력하세요." [formControl]="inquiry_content"></textarea>
+        </ion-item>
+      </div>
+
+
+
+      <ion-row id="submit-btn">
+        <button ion-button class="submit-btn" full type="submit" [disabled]="!inquiryForm.valid" clear><ion-icon ios="ios-checkmark-circle" md="md-checkmark-circle"></ion-icon>&nbsp;등록하기</button>
+      </ion-row>
+    </ion-list>
+
+
+
+  </form>
+
+</ion-content>

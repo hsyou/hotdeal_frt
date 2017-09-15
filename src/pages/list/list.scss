@@ -1,0 +1,72 @@
+ion-navbar{
+    background: none;
+}
+//ios tab button
+    .tabs-ios .tabbar {
+    background-color:#1c1f2a;
+    }
+
+    .tabs-ios .tab-button:hover:not(.disable-hover), .tabs-ios .tab-button[aria-selected=false] {
+        background-color:#1c1f2a;
+        color:white;
+    }
+    .tabs-ios .tab-button:hover:not(.disable-hover), .tabs-ios .tab-button[aria-selected=true] {
+        background-color:#1c1f2a;
+        color:#993dbc;
+    }
+
+//android tab button
+    .tabs-md .tab-button[aria-selected="false"] {
+    background-color:#1c1f2a;
+    color:white;
+    }
+
+    .tabs-md .tab-button[aria-selected="true"] {
+    background-color:#1c1f2a;
+    color:#993dbc;
+    }
+
+    page-list{
+    //토글버튼
+      .button-md{
+         position: absolute;
+         bottom:0px;
+         right:0px;
+         z-index: 10;
+         height:5.6rem;
+         margin:0;
+         background-color: #1c1f2a;
+          -webkit-box-shadow: none;
+         box-shadow: none;
+    /* transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1), background-color 300ms cubic-bezier(0.4, 0, 0.2, 1), color 300ms cubic-bezier(0.4, 0, 0.2, 1); */
+    /* transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1), background-color 300ms cubic-bezier(0.4, 0, 0.2, 1), color 300ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1); */
+        }
+        .button-ios{
+         position: absolute;
+         bottom:0px;
+         right:0px;
+         z-index: 10;
+         height:4.6rem;
+         margin:0;
+         background-color: #1c1f2a;
+        }
+        .button-ios.activated{
+            background-color: #1c1f2a;
+        }
+
+        .button-md:hover:not(.disable-hover) {
+            background-color: #1c1f2a;
+        }
+
+    }
+    //pagination
+    .swiper-pagination-progress {
+        background: #1c1f2a;
+    }
+    .swiper-pagination .activated{
+        background: yellow;
+    }
+
+    .tabs-md .tabbar, .tabs-ios .tabbar {
+    background: #1c1f2a;
+}

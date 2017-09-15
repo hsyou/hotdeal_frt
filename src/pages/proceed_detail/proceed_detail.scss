@@ -1,0 +1,50 @@
+proceed_detail{
+        .navbar{
+        background-color:#1c1f2a;
+        color:white;
+         }
+        ion-navbar{
+            background-color:#1c1f2a;
+            color:white;
+        }
+
+        .toolbar-background, .toolbar-background-md{
+            background-color:#1c1f2a;
+            color:white;
+        }
+        #sample{
+            color:white;
+        }
+
+        //android back button
+        .button-inner {
+            color:white;
+        }
+        .back-button-text-ios {
+            display: none;
+        }
+
+        //닫기 버튼
+        .button-ios{
+            background-color: #993dbc;
+        }
+        .button-md{
+            background-color: #993dbc;
+            box-shadow: none;
+        }
+        .button-ios.activated,.button-md.activated{
+             background-color: #993dbc;
+             box-shadow: none;
+        }
+        .text-ios-primary,.text-md-primary {
+            color: white;
+        }
+        .hidden-show-when {
+             display: inline !important; 
+        }
+
+        //옵션 버튼
+        #btn_choice{
+            float:right;
+        }
+}

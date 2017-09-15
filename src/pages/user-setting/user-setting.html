@@ -1,0 +1,78 @@
+<ion-content>
+  <ion-navbar>
+    <ion-title>계정설정</ion-title>
+  </ion-navbar>
+  <div class="setting_list">
+    내 정보
+  </div>
+ <ion-list>
+  <form [formGroup]="authForm" (ngSubmit)="cert_phone.hasError('cert_match')">
+   <ion-row col-12>
+     <ion-item col-4><h4 class="setting_title">이메일(ID)</h4></ion-item>
+     <ion-item col-8><h4>{{email}}</h4></ion-item>
+   </ion-row>
+   <ion-row col-12>
+     <ion-item col-4><h4 class="setting_title">이름</h4></ion-item>
+     <ion-item col-8><h4>{{username}}</h4></ion-item>
+   </ion-row>
+    <ion-row col-12>
+     <ion-item col-4><h4 class="setting_title">생년월일</h4></ion-item>
+     <ion-item col-8><h4>{{birth}}</h4></ion-item>
+   </ion-row>
+   <ion-row col-12>
+     <ion-item col-4><h4 class="setting_title">휴대전화번호</h4></ion-item>
+     <ion-item col-5><ion-input  name="user_phone" type="tel" placeholder="{{phone}}" [formControl]="user_phone"></ion-input></ion-item>
+     <ion-item col-3><button type="button" (click)="changePhone()" ion-button outline>인증하기</button></ion-item>
+   </ion-row>
+   <ion-row col-12>
+     <ion-item col-4><h4 class="setting_title">인증번호 확인</h4></ion-item>
+     <ion-item col-5><ion-input name="cert_phone" id="phone_check" col-12 type="tel" placeholder="인증번호 입력" [formControl]="cert_phone"></ion-input></ion-item>
+     <ion-item col-3><button type="button" (click)="checkCert()" ion-button outline >인증확인</button></ion-item>
+   </ion-row>
+      <div *ngIf="cert_phone.hasError('cert_mismatch') && cert_phone.touched" class="error-box">&nbsp;&nbsp; 인증번호가 다릅니다</div>
+      <div *ngIf="cert_phone.hasError('cert_match')" class="success-box">&nbsp;&nbsp; 인증 성공</div>
+  </form>
+ </ion-list>
+ <div class="setting_list">
+    계정연동
+  </div>
+  <ion-list>
+    <ion-row col-12>
+      <ion-item col-8><h4 class="setting_title">페이스북 연동</h4></ion-item>
+      <ion-item col-4>
+        <ion-toggle checked="false" disabled></ion-toggle>
+      </ion-item>
+    </ion-row>
+    <ion-row col-12>
+      <ion-item col-8><h4 class="setting_title">네이버 연동</h4></ion-item>
+      <ion-item col-4>
+        <ion-toggle checked="false" disabled></ion-toggle>
+      </ion-item>
+    </ion-row>
+    <ion-row col-12>
+      <ion-item col-8><h4 class="setting_title">인스타그램 연동</h4></ion-item>
+      <ion-item col-4>
+        <ion-toggle checked="false" disabled></ion-toggle>
+      </ion-item>
+    </ion-row>
+  </ion-list>
+  <!--
+  <div class="setting_list">
+    수신동의
+  </div>
+  <ion-list>
+    <ion-row col-12>
+      <ion-item col-8><h4 class="setting_title">SMS 마케팅 수신동의</h4></ion-item>
+      <ion-item col-4>
+        <ion-toggle checked="true"></ion-toggle>
+      </ion-item>
+    </ion-row>
+    <ion-row col-12>
+      <ion-item col-8><h4 class="setting_title">EMAIL 마케팅 수신동의</h4></ion-item>
+      <ion-item col-4>
+        <ion-toggle checked="true"></ion-toggle>
+      </ion-item>
+    </ion-row>
+  </ion-list>-->
+
+</ion-content>

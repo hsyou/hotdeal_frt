@@ -1,0 +1,114 @@
+page-qna {
+    //툴바
+    ion-navbar.toolbar {
+        border-bottom: 1px solid #e6e6e6;
+    }
+    //타이틀 - 계정설정    
+    .toolbar-title-md,  .toolbar-title-ios {
+        color:#993dbc;
+    }
+    .toolbar-background, .toolbar-background-md {
+    background-color:white;
+    }
+    //전체배경
+    .scroll-content {
+    background-color:#E6E6E6;
+    color:grey;
+    }
+
+    //버튼
+    .col{
+        text-align: center;
+    }
+
+
+    //탭
+    .segment-ios .segment-button,.segment-md .segment-button {
+        background-color: white;
+        color:grey;
+        border-color: white;
+        border-bottom-width: 2px;
+    }
+    //탭 클릭시
+   .segment-md .segment-button.segment-activated {
+        background-color: white;
+        color:#993dbc;
+        border-color:#993dbc;
+    }
+    .segment-ios .segment-button.segment-activated {
+        background-color: white;
+        border-bottom-color:#993dbc;
+        color:#993dbc;
+    }
+    //탭 목록
+    .list-ios > .item-block, .list-md > .item-block {
+        background-color:white;
+        color:black;
+        
+    }
+    .qna_row{
+        background-color: white;
+        color:black;
+    }
+
+    //아이템 밑줄
+    .list-md .item-block .item-inner,.list-ios .item-block .item-inner {
+    border-bottom: 1px solid #e6e6e6;
+    }
+
+    //아이템
+    .item_title{
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+    .item-md,.item-ios{
+        padding-left:0;
+    }
+    ion-row{
+        padding-left:10px;
+        padding-right:10px;
+    }
+    ion-icon{
+          vertical-align: text-bottom;
+    }
+    ion-list{
+        padding-top: 10px;
+    }
+    #date{
+        float:right;
+        color:#a1a1a1;
+        vertical-align: baseline;
+        font-size:1.5rem;
+    }
+    
+    // #date{
+    //     float:right;
+    //     color:#a1a1a1;
+    //     vertical-align: baseline;
+    //     font-size:1.5rem;
+    // }
+
+    //내용 없을 때 
+    .nothing_mention{
+        color:grey;
+        text-align: center;
+        margin-top:30%;
+    }
+   
+
+    //footer
+    ion-footer{
+        background: none;
+        height:50px;
+    }
+     #footer_div1{
+        padding-left: 10px;
+    }
+    #footer_div2{
+        text-align: center;
+    }
+
+    #footer_btn{
+        background-color: grey;
+    }
+}

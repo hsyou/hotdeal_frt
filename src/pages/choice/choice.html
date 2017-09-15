@@ -1,0 +1,19 @@
+<ion-content>
+    <!--<div style="color:white">{{item_title}}</div>-->
+    <div id="title"><h3>옵션 선택</h3></div>
+    <div *ngIf="optionVOList">
+        <ion-list style="color:white" *ngFor="let option of optionVOList">
+            <ion-card id="ion-card" (click)="goBuy(option.item_id,option.option_id,option.option_name)">
+                {{option.option_name}}
+                <br>최소인원 : {{option.option_min_num}}명
+            </ion-card>
+        </ion-list>
+    </div>
+</ion-content>
+<ion-footer>
+    <button ion-button (click)="back()">
+        <span ion-text color="primary" showWhen="ios"></span>
+       <ion-icon ios="ios-arrow-back" md="ios-arrow-back"></ion-icon>
+      </button>
+<!--    <button ion-button (click)="goBid(item_id)">cc</button>-->
+</ion-footer>

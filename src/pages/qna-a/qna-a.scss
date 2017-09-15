@@ -1,0 +1,19 @@
+page-qna-a {
+    //툴바
+    ion-navbar.toolbar {
+        border-bottom: 1px solid #e6e6e6;
+    }
+    //타이틀 - 계정설정    
+    .toolbar-title-md,  .toolbar-title-ios {
+        color:#993dbc;
+    }
+    .toolbar-background, .toolbar-background-md {
+    background-color:white;
+    }
+    //전체배경
+    .scroll-content {
+    background-color:#E6E6E6;
+    color:grey;
+    }
+
+}

@@ -1,0 +1,56 @@
+<!--<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+      <ion-icon name="menu" ></ion-icon>
+    </button>
+        <ion-title class="navbar">진행중</ion-title>
+
+    </ion-navbar>
+</ion-header>-->
+
+<ion-content>
+    <ion-slides *ngIf="result>0" [speed]="500" [loop]="true" pager paginationType="progress">
+        <ion-slide id="ion_slide" *ngFor="let data of proceed" (click)="slideClick(data.item_id)" class="slide" style="background-color: #1c1f2a">
+            <img id="img" src="http://www.fixme.kr/{{data.item_main_img}}">
+            <div class="title">
+                <div class="proceed_title">
+                    <ion-icon ios="ios-heart" md="md-heart"></ion-icon> &nbsp; {{data.item_like}}</div>
+                <div class="proceed_title">
+                    <ion-icon ios="md-time" md="md-time"></ion-icon> &nbsp; <span class="text" style="color:white"></span>
+                    <div class="item_end_date" style="font-size:0%;color:white;visibility:hidden">{{data.item_end_date}}</div>
+                </div>
+            </div>
+        </ion-slide>
+    </ion-slides>
+    <div *ngIf="result==0">
+        <div id="nothing">
+            진행중인 상품이 없습니다.
+        </div>
+    </div>
+</ion-content>
+<!--
+<ion-content>
+    <ion-slides *ngIf="proceed" [autoplay]="3000" [speed]="1000" [loop]="true" pager paginationType="progress">
+        <ion-slide id="ion_slide" *ngFor="let data of proceed" (click)="slideClick(data.item_id)" class="slide" style="background-color: #1c1f2a">
+            <img id="img" src="http://www.fixme.kr/{{data.item_main_img}}">
+            <div>남은시간 : <span class="text" style="color:white"></span>
+                <div class="item_end_date" style="font-size:0%;color:white;visibility:hidden">{{data.item_end_date}}</div>
+            </div>
+
+
+        </ion-slide>
+    </ion-slides>
+
+</ion-content>
+<ion-footer>
+    <ion-navbar>
+        <button class="btn" ion-button menuToggle col-1 clear>
+      <ion-icon name="menu" ></ion-icon>
+    </button>
+        <button class="btn_sel" ion-button col-2 clear (click)="btn_proceed()">진행중</button>
+        <button class="btn" ion-button col-3 clear (click)="btn_coming()">진행예정</button>
+        <button class="btn" ion-button col-2 clear (click)="btn_onedayclass()">원데이</button>
+        <button class="btn" ion-button col-3 clear (click)="btn_freeticket()">프리티켓</button>
+
+    </ion-navbar>
+</ion-footer>-->

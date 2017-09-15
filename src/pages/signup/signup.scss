@@ -1,0 +1,173 @@
+page-signup{
+
+    .list-ios > .item-block:first-child {
+        border-top: #1c1f2a;
+    }
+    .list-md {
+        border-bottom-color: #1c1f2a;
+    }
+
+    //에러박스
+    .error-box{
+        color:red;
+    }
+    .success-box{
+        color:#993dbc;
+    }
+
+
+
+    //전체배경
+    .scroll-content {
+    background-color:#E6E6E6;
+    }
+
+
+    .list-md > .item-block {
+    background-color:white;
+    color:black;
+    }
+     .list-ios > .item-block {
+    background-color:white;
+    color:black;
+    }
+
+    .form{
+        margin-top:5%;
+        margin-bottom: 5%;
+    }
+    .item-ios.item-block .item-inner {
+     border-bottom:0px;
+    }
+    .item-md.item-block .item-inner {
+     border-bottom:0px;
+    }
+
+    [col-12] {
+    padding:0;
+    }
+
+    .text-input-md {
+        margin:0;
+    }
+    
+    //타이틀 - 회원가입 글자색
+    .toolbar-title-md,  .toolbar-title-ios {
+        color:#993dbc;
+    }
+    .toolbar-background, .toolbar-background-md {
+    background-color:white;
+    }
+
+
+    //input 밑줄 처음
+    .list-md .item-block .item-inner {
+        border-bottom: 1px solid white;
+    }
+    //input 쓰고 지울때
+   .item-md.item-input.ng-invalid.ng-touched:not(.input-has-focus) .item-inner {
+        border-bottom-color:white;
+        box-shadow: none;
+    }
+    //쓸때 포커스 있을때
+    .item-md.item-input.input-has-focus .item-inner{
+        border-bottom-color:white;
+        box-shadow: none;
+    }
+    //쓰고 난후 포커스 다른곳
+    .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus) .item-inner {
+        border-bottom-color: white;
+        box-shadow: inset 0 -1px 0 0 white;
+    }
+
+    //input 에러
+    .item-md.item-input.ng-invalid.ng-touched:not(.input-has-focus):not(.item-input-has-focus) .item-inner {
+    border-bottom-color: white;
+    -webkit-box-shadow: inset 0 -1px 0 0 white;
+    
+    box-shadow: inset 0 -1px 0 0 white;
+    }
+    //input 성공
+    .item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner, .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner {
+    border-bottom-color: white;
+    -webkit-box-shadow: inset 0 -1px 0 0 white;
+    box-shadow: inset 0 -1px 0 0 white;
+    }
+    //input re password 성공
+    .list-md .item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus):last-child, .list-md .item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus):last-child {
+    border-bottom-color: white;
+    -webkit-box-shadow: inset 0 -1px 0 0 white;
+    box-shadow: inset 0 -1px 0 0 white;
+    } 
+
+    //비밀번호 밑줄
+    .list-md .item-input.ng-valid.input-has-value:not(.input-has-focus):last-child {
+    border-bottom-color: white;
+    box-shadow:none;
+    }
+    .list-md .item-input.input-has-focus:last-child {
+    border-bottom-color: white;
+    box-shadow:none;
+    }
+
+
+    //체크박스 남성,여성
+    .item-radio-checked.item-ios ion-label,  .item-radio-checked.item-md ion-label {
+        color:#993dbc;
+    }
+    //체크박스 체크
+    .radio-ios .radio-checked .radio-inner, .radio-md .radio-checked {
+        border-color:#993dbc;
+    }
+    //체크박스(안드로이드) 가운데점
+    .radio-md .radio-inner {
+        background-color: #993dbc;
+    }
+        
+
+
+    //인증,확인 버튼 css
+    .button-outline-ios, .button-outline-md  {
+        border-color:#949494;
+        color:#949494;
+    }
+    .button-outline-ios.activated, .button-outline-md.activated {
+        background-color:#993dbc;
+        color:white;
+    }
+    .label-md {
+        margin: 11px 8px 11px 0px;
+    }
+
+    //이용약관
+    #mention{
+        color:black;
+        text-align: center;
+    }
+
+    //가입하기
+    .button-clear-ios, .button-clear-md{
+        color:white;
+    }
+
+     @media(max-width:375px){
+        .item-block{
+            min-height:3.5rem;
+        }
+    }
+    #submit-btn{
+         margin-top:10%;
+         background-color: #993dbc;
+    }
+
+
+
+
+}
+    //생년월일 cancel,done
+    .picker-ios .picker-button,.picker-md .picker-button{
+        color:#993dbc;
+    }
+    .picker-md .picker-opt.picker-opt-selected,.picker-ios .picker-opt.picker-opt-selected {
+    color:#993dbc;
+    }

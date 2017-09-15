@@ -1,0 +1,73 @@
+page-find_id {
+      .back-button-text-ios{
+         display: none;
+     }
+     .toolbar-title-ios{
+         color:white;
+     }
+     .toolbar-title-md{
+         color:white;
+     }
+     .toolbar-background, .toolbar-background-md {
+     background-color: #993dbc;
+     }
+
+     .scroll-content {
+      background-color: #993dbc;
+     }
+     ion-content{
+         position: relative;
+     }
+     .list-ios >.item-block{
+          background-color: #993dbc;
+     }
+     .list-md >.item-block{
+          background-color: #993dbc;
+     
+     }
+
+     //Input 밑줄
+    .list-ios .item-block .item-inner {
+        border-bottom:none;
+    }
+
+    ion-input{
+        width:80%;
+        left:10%;
+        border-bottom:1px solid white;
+    }
+    .button-md{
+        height:4.5rem;
+    }
+
+     .div1{
+        text-align: center;
+        margin-top:5%;
+     }
+     .div2{
+         text-align:center;
+     }
+     .btn1{
+         background-color: #993dbc;
+         border:2px solid white;
+         width:80%;
+         left:10%;
+     }
+      //뒤로가기 버튼
+     .bar-button-default-ios, .bar-button-default-md {
+     color:white;
+     }
+
+     //footer
+     //문제가 있으신가요 선 삭제
+     .header-md::after, .tabs-md[tabsPlacement="top"] > .tabbar::after, .footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+     width:0;
+     }
+     #footer{
+         font-size: 0.8em;
+     }
+     ion-footer{
+         height:10%;
+     }
+
+}

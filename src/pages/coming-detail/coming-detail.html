@@ -1,0 +1,19 @@
+<ion-content>
+  <div style="color:white">
+    <img src="http://www.fixme.kr{{item_sub2_img}}">
+  <!--   <a href="{{item_link}}">-->
+       <img src="http://www.fixme.kr{{item_link_img}}" >
+    <!--   </a>-->
+  </div>
+</ion-content>
+
+<ion-footer>
+  <button ion-button (click)="back()" clear>
+        <span ion-text color="primary" showWhen="ios">
+        <ion-icon name="md-close" showWhen="android,windows"></ion-icon></span>
+  </button>
+  <button ion-button (click)="choiceLikeItem()" clear>
+     <ion-icon *ngIf="item_like_flag==1" ios="ios-heart" md="md-heart"></ion-icon>
+  <ion-icon *ngIf="item_like_flag==0" ios="ios-heart-outline" md="md-heart-outline"></ion-icon>
+</button>
+</ion-footer>

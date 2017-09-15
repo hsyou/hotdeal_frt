@@ -1,0 +1,56 @@
+<ion-content>
+  <ion-navbar>
+    <ion-title>문의내역</ion-title>
+  </ion-navbar>
+
+  <ion-segment [(ngModel)]="qna">
+    <ion-segment-button value="waiting">
+      답변 대기중 문의
+    </ion-segment-button>
+    <ion-segment-button value="complete">
+      답변 완료된 문의
+    </ion-segment-button>
+  </ion-segment>
+
+  <div [ngSwitch]="qna">
+    <ion-list *ngSwitchCase="'waiting'">
+      <ion-row class="qna_row" *ngIf="list!=null">
+        <ion-item *ngFor="let data of list" (click)="showQna(data.inquiry_title,data.inquiry_content)" class="item_title">
+          <span class="item_title">{{data.inquiry_title}}</span>
+          <div id="date">{{data.inquiry_indate|date:'yy/MM/dd'}}
+            <ion-icon ios="ios-arrow-forward" md="ios-arrow-forward"></ion-icon>
+          </div>
+          <!--<div id="date">
+              <ion-icon ios="ios-arrow-forward" md="ios-arrow-forward"></ion-icon>
+            </div>-->
+        </ion-item>
+        <!--<ion-item col-3>{{data.inquiry_indate}};
+            <ion-icon ios="ios-arrow-forward" md="ios-arrow-forward"></ion-icon>
+          </ion-item>-->
+      </ion-row>
+      <div class="nothing_mention" *ngIf="list==''">
+        문의하신 질문이 없습니다.
+      </div>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'complete'">
+      <ion-row class="qna_row" *ngIf="end!=null">
+        <ion-item *ngFor="let data of end" (click)="endQna(data.inquiry_title,data.inquiry_content,data.inquiry_answer)" class="item_title">
+          <span class="item_title">{{data.inquiry_title}}</span>
+          <div id="date">{{data.inquiry_indate|date:'yy/MM/dd'}}
+            <ion-icon ios="ios-arrow-forward" md="ios-arrow-forward"></ion-icon>
+          </div>
+        </ion-item>
+      </ion-row>
+      <div class="nothing_mention" *ngIf="end==''">
+        답변 완료된 문의가 없습니다.
+      </div>
+    </ion-list>
+
+  </div>
+
+
+</ion-content>
+<ion-footer>
+  <div col-12 id="footer_div2"><button id="footer_btn" col-12 ion-button (click)="inquiry()">문의하기</button></div>
+</ion-footer>
